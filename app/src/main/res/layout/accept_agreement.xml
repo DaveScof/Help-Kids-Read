@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <CheckBox
+        android:id="@+id/read_accept_chkbx"
+        android:checked="true"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/read_and_accepted"
+        android:textColor="@color/darkest_gray"
+        android:buttonTint="@color/colorPrimary"/>
+    <TextView
+        style="@style/textView.link"
+        android:layout_toRightOf="@id/read_accept_chkbx"
+        android:layout_toEndOf="@id/read_accept_chkbx"
+        android:layout_alignBaseline="@id/read_accept_chkbx"
+        android:layout_marginStart="@dimen/dimen_4"
+        android:layout_marginLeft="@dimen/dimen_4"
+        android:text="@string/terms_and_conditions"
+        android:id="@+id/textView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/of_charity_with_books"
+        android:textColor="@color/darkest_gray"
+        android:paddingLeft="@dimen/dimen_30"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/read_accept_chkbx"/>
+</RelativeLayout>

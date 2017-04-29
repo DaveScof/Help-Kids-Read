@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Charity With Books</string>
+    <string name="next">Next</string>
+
+    <!-- Generic Strings-->
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</string>
+    <string name="help_kids">Help kids with their reading</string>
+    <string name="add_books">Add Books for kids to read</string>
+    <string name="contribute_questions">Create questions for books you\'ve already read</string>
+    <string name="join">Join</string>
+
+    <!-- Read And Accept License Agreement-->
+    <string name="read_and_accepted">I accept the</string>
+    <string name="terms_and_conditions">Terms and Regulations</string>
+    <string name="of_charity_with_books">of Charity With Books</string>
+
+    <!-- Input Field Strings-->
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="full_name">Full Name</string>
+    <string name="register">Register</string>
+    <string name="email_or_phone">Email or Phone Number</string>
+</resources>

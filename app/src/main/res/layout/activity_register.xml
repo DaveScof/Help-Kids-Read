@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+    <ImageView
+        android:layout_marginTop="@dimen/dimen_40"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/logo_top"
+        style="@style/imageView.logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_top"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginLeft="@dimen/dimen_50"
+        android:layout_marginRight="@dimen/dimen_50">
+
+        <EditText
+            android:id="@+id/register_full_name_input"
+            style="@style/editText.name"
+            android:hint="@string/full_name"/>
+
+        <EditText
+            android:id="@+id/register_email_input"
+            style="@style/editText.email"
+            android:textColorHint="@color/gray"
+            android:hint="@string/email_or_phone"/>
+
+
+        <EditText
+            android:id="@+id/register_password_input"
+            style="@style/editText.textPassword"
+            android:imeOptions="actionGo"
+            android:textColorHint="@color/gray"/>
+
+        <include layout="@layout/accept_agreement"/>
+
+        <Button
+            style="@style/button.actionPrimary"
+            android:id="@+id/button_register"
+            android:text="@string/register"/>
+
+        <TextView
+           style="@style/textView.link"
+            android:text="Already a member? Sign in."/>
+    </LinearLayout>
+
+</RelativeLayout>

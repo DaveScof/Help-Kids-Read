@@ -1,5 +1,6 @@
 package com.qenetech.charitywithbooks.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -94,7 +95,7 @@ public class RegisterActivity extends BaseActivity {
         boolean inserted = mHelper.createUser(fullName, phone , password);
         if (inserted) {
             toast("Registered");
-//            confirmRegistration();
+            openHome();
         } else {
             toast("Registration failed!");
         }
@@ -106,6 +107,11 @@ public class RegisterActivity extends BaseActivity {
     public static boolean isValidEmail(String emailStr) {
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(emailStr);
         return matcher.find();
+    }
+
+    private void openHome (){
+        startActivity(new Intent(this, HomeActivity.class));
+        finish();
     }
 
 //    private void confirmRegistration (){

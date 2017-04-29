@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/home"/>
+        <item
+            android:id="@+id/nav_kids"
+            android:icon="@drawable/ic_menu_kids"
+            android:title="@string/kids"/>
+        <item
+            android:id="@+id/nav_books"
+            android:icon="@drawable/ic_menu_books"
+            android:title="@string/books"/>
+        <item
+            android:id="@+id/nav_quizes"
+            android:icon="@drawable/ic_menu_quizes"
+            android:title="@string/quizes"/>
+    </group>
+
+    <item android:title="Manage">
+        <menu>
+            <item
+                android:id="@+id/nav_connect_with_friends"
+                android:icon="@drawable/ic_connect_with_friends"
+                android:title="@string/connect_with_friends"/>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_menu_profile"
+                android:title="@string/profile"/>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_settings"
+                android:title="@string/settings"/>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_menu_about"
+                android:title="@string/about_us"/>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_logout"
+                android:title="@string/log_out"/>
+        </menu>
+    </item>
+
+</menu>

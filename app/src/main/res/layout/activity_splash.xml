@@ -5,19 +5,20 @@
                 android:background="@color/white"
                 android:layout_height="match_parent">
 
-    <ImageView
-        style="@style/imageView.logo"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        android:id="@+id/logo_image_view"/>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logo_image_view"
+        android:layout_below="@+id/logo_image_view"
         android:textSize="@dimen/text_large"
         android:textColor="@color/darkest_gray"
         android:typeface="serif"
         android:gravity="center"
-        android:text="Charity With Books"/>
+        android:text="@string/help_kids_read"/>
+
+    <ImageView
+        style="@style/imageView.logo"
+        android:id="@+id/logo_image_view"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="187dp"/>
 </RelativeLayout>

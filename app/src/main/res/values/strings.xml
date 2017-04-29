@@ -21,4 +21,20 @@
     <string name="register">Register</string>
     <string name="phone_number">Phone Number</string>
     <string name="email_or_phone">Email or Phone Number</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="kids">Help Kids</string>
+    <string name="books">Add Books</string>
+    <string name="quizes">Create Quizes</string>
+    <string name="connect_with_friends">Connect with friends</string>
+    <string name="about_us">About us</string>
+    <string name="profile">Edit Profile</string>
+    <string name="settings">Settings</string>
+    <string name="log_out">Log out</string>
+    <string name="help_kids_read">Help Kids Read</string>
 </resources>

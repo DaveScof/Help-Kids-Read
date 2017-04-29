@@ -7,7 +7,7 @@ import android.util.Log;
  */
 
 public class Utils {
-    private static final String TAG = "Waziup-Agriculture";
+    private static final String TAG = "CharityWithBooks";
 
     public static void d(Object source, String message) {
         String name = source.getClass().getSimpleName();

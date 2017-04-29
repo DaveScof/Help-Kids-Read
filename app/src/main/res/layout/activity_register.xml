@@ -27,15 +27,15 @@
 
         <EditText
             android:id="@+id/register_email_input"
-            style="@style/editText.email"
-            android:textColorHint="@color/gray"
-            android:hint="@string/email_or_phone"/>
+            style="@style/editText.phone"
+            android:hint="@string/phone_number"
+            android:textColorHint="@color/gray"/>
 
 
         <EditText
             android:id="@+id/register_password_input"
             style="@style/editText.textPassword"
-            android:imeOptions="actionGo"
+            android:imeOptions="actionDone"
             android:textColorHint="@color/gray"/>
 
         <include layout="@layout/accept_agreement"/>

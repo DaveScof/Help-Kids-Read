@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -24,10 +25,11 @@ public class RegisterActivity extends BaseActivity {
 
     private static final String DIALOG_CONFIRM_PHONE = "Confirm Phone Dialog";
     private EditText mFullNameInput;
-    private EditText mEmailInput;
+    private EditText mPhoneInput;
     private EditText mPasswordInput;
 
     private Button mRegisterButton;
+    private CheckBox mAcceptTermsCheckBox;
     private Database.DatabaseHelper mHelper;
 
     @Override
@@ -39,8 +41,10 @@ public class RegisterActivity extends BaseActivity {
         mHelper = Database.getInstance();
 
         mFullNameInput = (EditText) findViewById(R.id.register_full_name_input);
-        mEmailInput = (EditText) findViewById(R.id.register_email_input);
+        mPhoneInput = (EditText) findViewById(R.id.register_email_input);
         mPasswordInput = getEd(R.id.register_password_input);
+
+        mAcceptTermsCheckBox = (CheckBox) findViewById(R.id.read_accept_chkbx);
 
         mRegisterButton = (Button) findViewById(R.id.button_register);
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
@@ -49,35 +53,26 @@ public class RegisterActivity extends BaseActivity {
                 login();
             }
         });
-
-        // Register when user clicks Go on PhoneNumber keyboard
-        mPasswordInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                mRegisterButton.callOnClick();
-                return false;
-            }
-        });
     }
 
     private void login (){
         // Retrieve all inputs
-        String firstName = mFullNameInput.getText().toString().trim();
-        String email = mEmailInput.getText().toString().trim();
+        String fullName = mFullNameInput.getText().toString().trim();
+        String phone = mPhoneInput.getText().toString().trim();
         String password = mPasswordInput.getText().toString().trim();
 
 
         // Validate Full Name
-        if (TextUtils.isEmpty(firstName)) {
+        if (TextUtils.isEmpty(fullName)) {
             mFullNameInput.setError("Please enter your full name");
             mFullNameInput.requestFocus();
             return;
         }
 
         // Validate Email or Phone
-        if (TextUtils.isEmpty(email)) {
-            mEmailInput.setError("Please enter your email or phone");
-            mEmailInput.requestFocus();
+        if (TextUtils.isEmpty(phone)) {
+            mPhoneInput.setError("Please enter your email or phone");
+            mPhoneInput.requestFocus();
             return;
         }
 
@@ -87,15 +82,22 @@ public class RegisterActivity extends BaseActivity {
             mPasswordInput.requestFocus();
             return;
         }
+
+        // Validate Accepting Terms and Conditions
+        if (!mAcceptTermsCheckBox.isChecked())
+        {
+            mAcceptTermsCheckBox.requestFocus();
+            toast("Please Accept Terms and Conditions");
+            return;
+        }
         
-//        boolean inserted = mHelper.createUser(firstName, lastName ,email, phoneNumber);
-//        if (inserted) {
-//            toast("Registered");
+        boolean inserted = mHelper.createUser(fullName, phone , password);
+        if (inserted) {
+            toast("Registered");
 //            confirmRegistration();
-//        } else {
-//            toast("Registration failed!");
-//        }
-        toast("Registered");
+        } else {
+            toast("Registration failed!");
+        }
     }
 
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX =

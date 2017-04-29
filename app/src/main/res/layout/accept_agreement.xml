@@ -5,7 +5,7 @@
               android:layout_height="wrap_content">
     <CheckBox
         android:id="@+id/read_accept_chkbx"
-        android:checked="true"
+        android:checked="false"
         android:layout_marginTop="@dimen/dimen_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

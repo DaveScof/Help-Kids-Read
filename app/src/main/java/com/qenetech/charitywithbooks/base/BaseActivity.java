@@ -12,12 +12,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.qenetech.charitywithbooks.utils.Utils;
+
 import java.util.Locale;
 
 
 public abstract class BaseActivity extends AppCompatActivity {
-
-    public static final String TAG = "Charity With Books";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,11 +78,11 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     public void d(String message) {
-        Log.d(TAG, String.format(Locale.getDefault(), "%s : %s", TAG, message));
+        Utils.d(this, String.format(Locale.getDefault(), "%s : %s", this, message));
     }
 
     public void e(String message) {
-        Log.e(TAG, String.format(Locale.getDefault(), "%s : %s", TAG, message));
+        Utils.e(this, String.format(Locale.getDefault(), "%s : %s", this, message));
     }
 
     public int getColorValue(int id) {

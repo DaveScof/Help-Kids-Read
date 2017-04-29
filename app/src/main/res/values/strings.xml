@@ -19,5 +19,6 @@
     <string name="email">Email</string>
     <string name="full_name">Full Name</string>
     <string name="register">Register</string>
+    <string name="phone_number">Phone Number</string>
     <string name="email_or_phone">Email or Phone Number</string>
 </resources>

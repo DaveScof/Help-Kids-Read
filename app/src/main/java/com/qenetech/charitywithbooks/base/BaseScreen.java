@@ -11,6 +11,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.qenetech.charitywithbooks.utils.Utils;
+
 
 public abstract class BaseScreen extends Fragment {
 
@@ -29,11 +31,11 @@ public abstract class BaseScreen extends Fragment {
     }
 
     public void d(String message) {
-        Log.d(BaseActivity.TAG, message);
+        Utils.d(this, message);
     }
 
     public void e(String message) {
-        Log.e(BaseActivity.TAG, message);
+        Utils.e(this, message);
     }
 
     public TextView getTv(int res_id) {

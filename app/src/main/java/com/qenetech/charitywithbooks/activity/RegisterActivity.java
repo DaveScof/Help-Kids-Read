@@ -1,6 +1,7 @@
 package com.qenetech.charitywithbooks.activity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.qenetech.charitywithbooks.R;
+import com.qenetech.charitywithbooks.api.Api;
 import com.qenetech.charitywithbooks.base.BaseActivity;
 import com.qenetech.charitywithbooks.database.Database;
 
@@ -94,19 +96,34 @@ public class RegisterActivity extends BaseActivity {
         
         boolean inserted = mHelper.createUser(fullName, phone , password);
         if (inserted) {
-            toast("Registered");
-            openHome();
+            new SignUpTask().execute(fullName, phone ,password);
         } else {
-            toast("Registration failed!");
+            toast("Database Registration failed!");
         }
     }
 
-    public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
-            Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
-
-    public static boolean isValidEmail(String emailStr) {
-        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(emailStr);
-        return matcher.find();
+    private class SignUpTask extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... params) {
+            String name = params[0];
+            String phone = params[1];
+            String password = params[2];
+            try {
+                return Api.registerTalent(name,phone,password);
+            } catch (Exception e) {
+                return Api.createError(e.getMessage());
+            }
+        }
+        @Override
+        protected void onPostExecute(String s) {
+            if (s.startsWith(Api.RESULT_ERROR)) {
+                String message = Api.getError(s);
+                toast(message);
+            } else {
+                toast("Registration success");
+                openHome();
+            }
+        }
     }
 
     private void openHome (){

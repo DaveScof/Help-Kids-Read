@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import com.qenetech.charitywithbooks.R;
 import com.qenetech.charitywithbooks.base.BasePagerActivity;
 import com.qenetech.charitywithbooks.fragment.FragmentTourBooks;
+import com.qenetech.charitywithbooks.fragment.FragmentTourKids;
 import com.qenetech.charitywithbooks.fragment.FragmentTourQuiz;
 
 public class HomeActivity extends BasePagerActivity
@@ -47,10 +48,9 @@ public class HomeActivity extends BasePagerActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        // Set up ViewPager for the Swipe Tab Interface
+//      Set ViewPger View
         mViewPager = getVp(R.id.activity_home_view_pager);
-        Fragment[] fragments = {new FragmentTourQuiz(), new FragmentTourBooks()};
-        addFragments(fragments);
+        setUpHomeScreen();
     }
 
     @Override
@@ -91,22 +91,40 @@ public class HomeActivity extends BasePagerActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-//        if (id == R.id.nav_camera) {
-//            // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_manage) {
-//
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
+        switch (id){
+            case R.id.nav_home:
+               setUpHomeScreen();
+                break;
+            case R.id.nav_kids:
+               setUpKidsScreen();
+                break;
+            case R.id.nav_books:
+                setUpBooksScreen();
+                break;
+            default:
+                break;
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void setUpHomeScreen (){
+        // Set up ViewPager for the Swipe Tab Interface
+        Fragment[] fragmentsHome = {new FragmentTourKids(), new FragmentTourBooks()};
+        addFragments(fragmentsHome);
+    }
+
+    private void setUpKidsScreen (){
+        // Set up ViewPager for the Swipe Tab Interface
+        Fragment[] fragmentsKids = {new FragmentTourBooks(), new FragmentTourQuiz()};
+        addFragments(fragmentsKids);
+    }
+
+    private void setUpBooksScreen (){
+        // Set up ViewPager for the Swipe Tab Interface
+        Fragment[] fragmentsBoks = {new FragmentTourKids(), new FragmentTourQuiz()};
+        addFragments(fragmentsBoks);
     }
 }

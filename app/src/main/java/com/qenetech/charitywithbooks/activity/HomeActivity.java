@@ -3,6 +3,7 @@ package com.qenetech.charitywithbooks.activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,8 +15,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.qenetech.charitywithbooks.R;
+import com.qenetech.charitywithbooks.base.BasePagerActivity;
+import com.qenetech.charitywithbooks.fragment.FragmentTourBooks;
+import com.qenetech.charitywithbooks.fragment.FragmentTourQuiz;
 
-public class HomeActivity extends AppCompatActivity
+public class HomeActivity extends BasePagerActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -42,6 +46,11 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // Set up ViewPager for the Swipe Tab Interface
+        mViewPager = getVp(R.id.activity_home_view_pager);
+        Fragment[] fragments = {new FragmentTourQuiz(), new FragmentTourBooks()};
+        addFragments(fragments);
     }
 
     @Override

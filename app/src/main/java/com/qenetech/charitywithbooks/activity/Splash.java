@@ -74,6 +74,7 @@ public class Splash extends BaseActivity {
 //            QueryPreferences.setAppOpened(this);
 //        }
 //
+//        nextActivity = new Intent(this, HomeActivity.class);
         startActivity(nextActivity);
         finish();
     }

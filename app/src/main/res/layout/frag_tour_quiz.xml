@@ -9,8 +9,9 @@
                android:src="@drawable/ic_tour_quiz"/>
 
     <TextView  style="@style/textView.title"
-               android:text="@string/contribute_questions"/>
+               android:text="@string/quiz_kids"/>
 
-    <TextView  style="@style/textView.loremipsum"/>
+    <TextView  style="@style/textView.description"
+        android:text="@string/quiz_Kids_description"/>
 
 </LinearLayout>

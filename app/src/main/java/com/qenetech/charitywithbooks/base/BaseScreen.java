@@ -18,6 +18,8 @@ public abstract class BaseScreen extends Fragment {
 
     public View mRoot;
 
+    public abstract String getTitle();
+
     public View getView(int id) {
         return mRoot.findViewById(id);
     }

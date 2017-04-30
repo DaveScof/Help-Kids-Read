@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#a34b00</color>
+    <color name="colorPrimaryDark">#5e2c00</color>
+    <color name="colorAccent">#ebf74803</color>
 
     <color name="white">#FFFFFFFF</color>
     <color name="black">#000000</color>
@@ -13,4 +13,6 @@
     <color name="darker_gray">#5D5D5D</color>
     <color name="darkest_gray">#434343</color>
     <color name="orange">#ED853E</color>
+
+    <color name="ViewPagerTabTtitle">#8d612e00</color>
 </resources>

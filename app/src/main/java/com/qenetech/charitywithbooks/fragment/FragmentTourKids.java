@@ -15,10 +15,18 @@ import com.qenetech.charitywithbooks.base.BaseScreen;
  */
 
 public class FragmentTourKids extends BaseScreen {
+
+    private String mScreenTitle = "";
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mRoot = inflater.inflate(R.layout.frag_tour_kids, container, false);
         return mRoot;
+    }
+
+    @Override
+    public String getTitle() {
+        return mScreenTitle;
     }
 }

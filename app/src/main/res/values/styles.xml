@@ -69,14 +69,13 @@
         <item name="android:textSize">@dimen/text_large</item>
     </style>
 
-    <style name="textView.loremipsum">
+    <style name="textView.description">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingEnd" tools:targetApi="jelly_bean_mr1">@dimen/dimen_12</item>
         <item name="android:paddingRight">@dimen/dimen_12</item>
         <item name="android:paddingLeft">@dimen/dimen_12</item>
         <item name="android:paddingStart" tools:targetApi="jelly_bean_mr1">@dimen/dimen_12</item>
-        <item name="android:text">@string/lorem_ipsum</item>
         <item name="android:gravity">center</item>
     </style>
 
@@ -92,17 +91,8 @@
         <item name="android:paddingLeft">@dimen/dimen_12</item>
     </style>
 
-    <style name="editText.email">
-        <item name="android:hint">@string/email</item>
-        <item name="android:drawableLeft">@drawable/ic_input_email</item>
-        <item name="android:drawablePadding">@dimen/dimen_20</item>
-        <item name="android:inputType">textEmailAddress</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:imeOptions">actionNext</item>
-    </style>
-
     <style name="editText.name">
-        <item name="android:drawableLeft">@drawable/ic_input_user</item>
+        <item name="android:drawableLeft">@drawable/ic_input_user_2</item>
         <item name="android:drawablePadding">@dimen/dimen_20</item>
         <item name="android:inputType">textPersonName</item>
         <item name="android:maxLines">1</item>
@@ -111,7 +101,7 @@
     </style>
 
     <style name="editText.phone">
-        <item name="android:drawableLeft">@drawable/ic_input_phone</item>
+        <item name="android:drawableLeft">@drawable/ic_input_phone_2</item>
         <item name="android:drawablePadding">@dimen/dimen_20</item>
         <item name="android:inputType">phone</item>
         <item name="android:maxLines">1</item>

@@ -3,10 +3,16 @@
     <string name="next">Next</string>
 
     <!-- Generic Strings-->
-    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</string>
-    <string name="help_kids">Help kids with their reading</string>
-    <string name="add_books">Add Books for kids to read</string>
-    <string name="contribute_questions">Create questions for books you\'ve already read</string>
+    <string name="help_kids">Add kids you know into the app</string>
+    <string name="help_kids_description">Siblings, neighbors, underprivileged kids on the street… any kid you really want to help educate</string>
+
+    <string name="add_books">Help them choose a book</string>
+    <string name="add_books_description">The app will let them choose from recommended books for their ages and grade levels. Or you may even add your own suggestions</string>
+
+    <string name="quiz_kids">Track their progress</string>
+    <string name="quiz_Kids_description">The app will provide quizzes on the books they read, and even organize competitions that could win them prizes</string>
+
+
     <string name="join">Join</string>
 
     <!-- Read And Accept License Agreement-->
@@ -37,4 +43,6 @@
     <string name="settings">Settings</string>
     <string name="log_out">Log out</string>
     <string name="help_kids_read">Help Kids Read</string>
+    <string name="me">Me</string>
+    <string name="news">News</string>
 </resources>

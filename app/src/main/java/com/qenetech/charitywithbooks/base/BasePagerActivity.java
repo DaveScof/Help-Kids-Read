@@ -38,6 +38,12 @@ public abstract class BasePagerActivity extends BaseActivity {
             public int getCount() {
                 return fragments.length;
             }
+
+            @Override
+            public CharSequence getPageTitle(int position) {
+                BaseScreen fragment = (BaseScreen) fragments[position];
+                return fragment.getTitle();
+            }
         });
 
         return true;

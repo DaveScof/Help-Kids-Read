@@ -16,10 +16,16 @@ import com.qenetech.charitywithbooks.base.BaseScreen;
 
 public class FragmentTourQuiz extends BaseScreen {
 
+    private String mScreenTitle = "";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mRoot = inflater.inflate(R.layout.frag_tour_quiz, container, false);
         return mRoot;
+    }
+
+    @Override
+    public String getTitle() {
+        return mScreenTitle;
     }
 }

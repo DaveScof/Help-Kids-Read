@@ -1,5 +1,6 @@
 package com.qenetech.charitywithbooks.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -14,10 +15,18 @@ import com.qenetech.charitywithbooks.base.BaseScreen;
  */
 
 public class FragmentTourBooks extends BaseScreen {
+
+    private String mScreenTitle = "";
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mRoot = inflater.inflate(R.layout.frag_tour_books, container, false);
         return mRoot;
+    }
+
+    @Override
+    public String getTitle() {
+        return mScreenTitle;
     }
 }
